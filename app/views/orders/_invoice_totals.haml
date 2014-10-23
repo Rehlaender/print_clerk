@@ -4,16 +4,15 @@
       = t(:item_total)
       \:
     %td.cel2.bold.cell{:align => "right"}= number_to_currency @order.total_price
-    %tr
-      %td.cel1.bold
-        Tax
-        \:
-      %td.cel2.cell{:align => "right"}= number_to_currency @order.total_tax
+    - @order.taxes.each do |tax , value|
+      %tr
+        %td.cel1.bold
+          = "#{t(:vat)} #{tax}:"
+        %td.cel2.cell{:align => "right"}= number_to_currency value
   %tr
     %td.cel1.bold
       %strong
-        = t(:order_total)
-        \:
+        = "#{t(:order_total)}:"
     %td.cel2.cell{:align => "right"}
       %strong
         %span#summary-order-total= number_to_currency @order.total_price

@@ -15,15 +15,10 @@
   - @order.basket.items.each do |item|
     %tr
       %td.cell= item.product.ean unless @receipt
-      %td.cell= item.product.fullname rescue item.product.name
+      %td.cell
+        = item.product.fullname rescue item.product.name
+        - if item.respond_to? :discount and item.discount > 0
+          (#{-item.discount}%)
       %td.cell.price= number_to_currency(item.price) unless @receipt
       %td.cell.qty= item.quantity
       %td.cell.total= number_to_currency(item.price * item.quantity)
-    - if item.respond_to? :discount and item.discount > 0
-      %tr
-        %td.cell &nbsp;
-        %td.cell
-          (#{t(:discount)})
-        %td.cell.price= number_to_currency(-1 * item.discount)
-        %td.cell.qty &nbsp;
-        %td.cell.total= number_to_currency(-1 * item.discount * item.quantity)
