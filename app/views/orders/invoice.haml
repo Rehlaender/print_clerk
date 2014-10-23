@@ -18,6 +18,6 @@
         .spacer
           \&nbsp;
         .totals
-          = render :partial => "orders/totals_#{@template}"
+          = render :partial => "orders/invoice_totals" unless @slip
       .footer
         = render :partial => "orders/footer"

@@ -8,7 +8,7 @@
   %body{onload: "self.print()"}
     .receipt
       #header
-        = render :partial => "print/receipt_header"
+        = render :partial => "orders/receipt_header"
       .info
         - date = @order.ordered_on || @order.ordered_on
         =l(date.to_date) 
@@ -28,6 +28,21 @@
         .spacer
            
         .totals
-          = render :partial => "print/totals_receipt"
+          %table.totals
+            %tbody
+              %tr
+                %td.cel1.bold
+                  %strong= t(:order_total)
+                %td.cel2.cell{align: "right"}
+                  %strong
+                    %span#summary-order-total= euros @order.total_price
+              %tr
+                %td.cel1
+                %td.cel2
+              -@order.taxes.each do |tax_rate , amount|
+                %tr.total
+                  %td.cel1.bold
+                    = t(:vat) + " " + tax_rate.to_s + " % "
+                  %td.cel2.cell{align: "right"}= euros amount
       .footer
-        = render :partial => "print/receipt_footer"
+        = render :partial => "orders/receipt_footer"
