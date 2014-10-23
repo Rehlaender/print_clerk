@@ -30,7 +30,7 @@ Some texts are stored in locale files say print.yml
 
 1. Set the logo path preference to include your store / company logo.
 
-    print_invoice_logo_path: "company-logo.png"
+    invoice_logo_path: "company-logo.png"
     
     Somewhere in your asset path
 

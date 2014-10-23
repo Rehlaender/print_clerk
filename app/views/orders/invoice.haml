@@ -1,23 +1,23 @@
 !!!
 %html{:xmlns => "http://www.w3.org/1999/xhtml"}
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
     = stylesheet_link_tag "print-invoice.css" , :media => "all"
-    %title= t("#{params[:template]}.header")
+    %title= t("#{@template}.header")
   %body
     .a4
       #header
-        = render :partial => "orders/header"
+        = render :partial => "orders/invoice_header"
       .address
-        = render :partial => "orders/address"
+        = render :partial => "orders/invoice_address"
       .wrapper
         .items
-          = render :partial => "orders/items_#{@template}"
+          = render :partial => "orders/#{@template}_items"
         .thanks
-          = render :partial => "orders/thanks"
+          = render :partial => "orders/invoice_thanks"
         .spacer
           \&nbsp;
         .totals
           = render :partial => "orders/invoice_totals" unless @slip
       .footer
-        = render :partial => "orders/footer"
+        = render :partial => "orders/invoice_footer"

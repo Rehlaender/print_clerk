@@ -2,9 +2,9 @@
 
 %table.address
   %tr
-    %td.billing_header.bold{:width => "45%"}= I18n.t(:billing_address)
+    %td.billing_header.bold{:width => "45%"}= I18n.t(:address)
     %td{:width => "17%"}
-    %td.shiping_header.bold{:width => "45%"}= I18n.t(:shipping_address)
+    %td.shiping_header.bold{:width => "45%"}
   - addresses.each do |row|
     %tr
       %td.cell{:height => "15px", :width => "45%"}
