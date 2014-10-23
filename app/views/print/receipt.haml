@@ -1,24 +1,33 @@
 !!!
-%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+%html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    = stylesheet_link_tag "print-receipt" , :media => "all"
-    %title= I18n.t("#{params[:template]}.header")
-  %body{:onload => "self.print()"}
+    %meta{:charset => "utf-8"}
+    %title= t(:receipt)
+    = stylesheet_link_tag "html-receipt"
+    = stylesheet_link_tag "html-receipt" , :media => "print"
+  %body{onload: "self.print()"}
     .receipt
       #header
-        = render :partial => "spree/admin/invoice/receipt_header"
+        = render :partial => "print/receipt_header"
       .info
-        = I18n.l(@order.completed_at.to_date) if @order.completed_at
-        \&nbsp;/&nbsp;
-        \#{t(:order_number)} #{@order.number}
+        - date = @order.ordered_on || @order.ordered_on
+        =l(date.to_date) 
+        /
+        =t(:order)
+        =@order.number
         %br/
       .wrapper
         .line_items
-          = render :partial => "spree/admin/invoice/line_items_invoice"
+          %table.line_items
+            %tbody
+              - @order.basket.items.each do |i|
+                %tr
+                  %td.cell= i.product.name
+                  %td.cell.qty= i.quantity
+                  %td.cell.total= euros i.total
         .spacer
-          \&nbsp;
+           
         .totals
-          = render :partial => "spree/admin/invoice/totals_receipt"
+          = render :partial => "print/totals_receipt"
       .footer
-        = render :partial => "spree/admin/invoice/receipt_footer"
+        = render :partial => "print/receipt_footer"

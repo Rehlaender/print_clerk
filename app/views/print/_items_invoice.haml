@@ -1,4 +1,4 @@
-%table.line_items
+%table.items
   %colgroup
     %col/
     %col/
@@ -12,10 +12,10 @@
     %td.qty.bold
       = t(:qty)
     %td.total.bold= t(:total)
-  - @order.line_items.each do |item|
+  - @order.basket.items.each do |item|
     %tr
-      %td.cell= item.variant.sku unless @receipt
-      %td.cell= item.variant.product.fullname rescue item.variant.product.name
+      %td.cell= item.product.ean unless @receipt
+      %td.cell= item.product.fullname rescue item.product.name
       %td.cell.price= number_to_currency(item.price) unless @receipt
       %td.cell.qty= item.quantity
       %td.cell.total= number_to_currency(item.price * item.quantity)

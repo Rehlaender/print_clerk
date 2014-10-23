@@ -22,15 +22,15 @@ div.address {
   padding: 6px;
 
 }
-.line_items {
+.items {
   width: 620px;
 }
 
-.line_items .price, .line_items .total {
+.items .price, .items .total {
   text-align: right;
 }
 
-.line_items .qty {
+.items .qty {
   text-align: center;
 }
 

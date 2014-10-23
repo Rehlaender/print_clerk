@@ -4,7 +4,7 @@ module PrintClerk
 
     config.autoload_paths += %W(#{config.root}/lib)
 
-    initializer "spree_html_invoice.assets.precompile", :after => "spree.assets.precompile" do |app|
+    initializer "print_invoice.assets.precompile", :after => "clerk.assets.precompile" do |app|
       app.config.assets.precompile += [ "print-invoice.css", "print-receipt.css" ]
     end
 

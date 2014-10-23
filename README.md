@@ -34,7 +34,7 @@ Some texts are stored in locale files say print.yml
     
     Somewhere in your asset path
 
-2. Override any of the partial templates. they are address, footer, totals, header, thanks , and the line_items. The whole tanks is wrapped in a thanks hook, so replace or add at will.
+2. Override any of the partial templates. they are address, footer, totals, header, thanks , and the items. The whole tanks is wrapped in a thanks hook, so replace or add at will.
 
 4. Enable packaging slips, by setting 
 

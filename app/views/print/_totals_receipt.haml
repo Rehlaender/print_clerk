@@ -1,20 +1,16 @@
 %table.totals
-  %tr
-    %td.cel1.bold
-      %strong
-        = t(:order_total)
-        \:
-    %td.cel2.cell{:align => "right"}
-      %strong
-        %span#summary-order-total= number_to_currency @order.total
-  - if @order.price_adjustment_totals.present?
+  %tbody
+    %tr
+      %td.cel1.bold
+        %strong= t(:order_total)
+      %td.cel2.cell{align: "right"}
+        %strong
+          %span#summary-order-total= euros @order.total_price
     %tr
       %td.cel1
       %td.cel2
-    - @order.price_adjustment_totals.keys.each do |key|
-      - next unless @order.price_adjustment_totals[key]
+    -@order.taxes.each do |tax_rate , amount|
       %tr.total
         %td.cel1.bold
-          = key
-          \:
-        %td.cel2.cell{:align => "right"}= number_to_currency @order.price_adjustment_totals[key]
+          = t(:vat) + " " + tax_rate.to_s + " % "
+        %td.cel2.cell{align: "right"}= euros amount

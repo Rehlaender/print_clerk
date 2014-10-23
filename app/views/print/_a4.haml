@@ -11,13 +11,13 @@
       .address
         = render :partial => "address"
       .wrapper
-        .line_items
-          = render :partial => "line_items_#{params[:template]}"
+        .items
+          = render :partial => "items_#{@template}"
         .thanks
           = render :partial => "thanks"
         .spacer
           \&nbsp;
         .totals
-          = render :partial => "totals_#{params[:template]}"
+          = render :partial => "totals_#{@template}"
       .footer
         = render :partial => "footer"
