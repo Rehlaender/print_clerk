@@ -38,7 +38,7 @@ Some texts are stored in locale files say print.yml
 
 4. Enable packaging slips, by setting 
 
-  print_buttons: "invoice,packaging_slip"
+  print_buttons: "invoice,slip"
 
   Use above feature for your own template if you want. For each button_name, define a subsection with header,   print, and thanks, in your locale.
 

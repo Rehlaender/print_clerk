@@ -13,7 +13,7 @@ en:
     header: Customer Invoice
     thanks: Thank you for your order.
     print: Print Invoice
-  packaging_slip:
+  slip:
     header: Packaging Slip
     print: Print Slip
     thanks: Please check the contents immediately.

@@ -13,7 +13,14 @@ OrdersController.class_eval do
 
   def slip
     load_order
-    render  :layout => false
+    @slip = true
+    render "invoice" ,  :layout => false
+  end
+
+  def reminder
+    load_order
+    @reminder = true
+    render "invoice" ,  :layout => false
   end
 
 end

@@ -1,1 +1,23 @@
-= raw  render :partial => "a4"
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = stylesheet_link_tag "print-invoice.css" , :media => "all"
+    %title= t("#{params[:template]}.header")
+  %body
+    .a4
+      #header
+        = render :partial => "orders/header"
+      .address
+        = render :partial => "orders/address"
+      .wrapper
+        .items
+          = render :partial => "orders/items_#{@template}"
+        .thanks
+          = render :partial => "orders/thanks"
+        .spacer
+          \&nbsp;
+        .totals
+          = render :partial => "orders/totals_#{@template}"
+      .footer
+        = render :partial => "orders/footer"
