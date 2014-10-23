@@ -4,8 +4,7 @@ OfficeClerk::Application.routes.append do
       get :invoice
       get :receipt
       get :slip
+      get :reminder
     end
   end
-  
-  match 'print/:id(/:template)' => 'print#lasku' ,   :via  => [:get, :post]
 end

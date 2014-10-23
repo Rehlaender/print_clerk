@@ -12,7 +12,7 @@ fi:
     header: Lasku
     thanks: Kiitos tilauksestasi!
     print: Lasku
-  packaging_slip:
+  slip:
     header: Kuormakirja
     print: Kuormakirja
     thanks: Tarkistathan tilauksen välittömästi. Kiitos tilauksestasi!

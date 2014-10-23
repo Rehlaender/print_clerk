@@ -6,8 +6,8 @@
     %col.qty/
     %col.total/
   %tr
-    %td.sku.bold= t(:sku) unless @receipt
-    %td.desc.bold= t(:item_description)
+    %td.sku.bold= t(:ean) unless @receipt
+    %td.desc.bold= t(:description)
     %td.price.bold= t(:price) unless @receipt
     %td.qty.bold
       = t(:qty)
@@ -17,7 +17,7 @@
       %td.cell= item.product.ean unless @receipt
       %td.cell
         = item.product.fullname rescue item.product.name
-        - if item.respond_to? :discount and item.discount > 0
+        - if item.discount > 0
           (#{-item.discount}%)
       %td.cell.price= number_to_currency(item.price) unless @receipt
       %td.cell.qty= item.quantity

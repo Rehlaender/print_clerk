@@ -1,0 +1,14 @@
+%table.items
+  %colgroup
+    %col/
+    %col/
+  %tr
+    %td.sku.bold= t(:ean) unless @receipt
+    %td.desc.bold= t(:description)
+    %td.qty.bold= t(:qty)
+  - @order.basket.items.each do |item|
+    %tr
+      %td.cell= item.product.ean unless @receipt
+      %td.cell
+        = item.product.fullname rescue item.product.name
+      %td.cell.qty= item.quantity
