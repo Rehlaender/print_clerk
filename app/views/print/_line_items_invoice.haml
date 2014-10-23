@@ -1,0 +1,29 @@
+%table.line_items
+  %colgroup
+    %col/
+    %col/
+    %col.price/
+    %col.qty/
+    %col.total/
+  %tr
+    %td.sku.bold= t(:sku) unless @receipt
+    %td.desc.bold= t(:item_description)
+    %td.price.bold= t(:price) unless @receipt
+    %td.qty.bold
+      = t(:qty)
+    %td.total.bold= t(:total)
+  - @order.line_items.each do |item|
+    %tr
+      %td.cell= item.variant.sku unless @receipt
+      %td.cell= item.variant.product.fullname rescue item.variant.product.name
+      %td.cell.price= number_to_currency(item.price) unless @receipt
+      %td.cell.qty= item.quantity
+      %td.cell.total= number_to_currency(item.price * item.quantity)
+    - if item.respond_to? :discount and item.discount > 0
+      %tr
+        %td.cell &nbsp;
+        %td.cell
+          (#{t(:discount)})
+        %td.cell.price= number_to_currency(-1 * item.discount)
+        %td.cell.qty &nbsp;
+        %td.cell.total= number_to_currency(-1 * item.discount * item.quantity)

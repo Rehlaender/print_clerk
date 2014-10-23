@@ -1,0 +1,24 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = stylesheet_link_tag "print-receipt" , :media => "all"
+    %title= I18n.t("#{params[:template]}.header")
+  %body{:onload => "self.print()"}
+    .receipt
+      #header
+        = render :partial => "spree/admin/invoice/receipt_header"
+      .info
+        = I18n.l(@order.completed_at.to_date) if @order.completed_at
+        \&nbsp;/&nbsp;
+        \#{t(:order_number)} #{@order.number}
+        %br/
+      .wrapper
+        .line_items
+          = render :partial => "spree/admin/invoice/line_items_invoice"
+        .spacer
+          \&nbsp;
+        .totals
+          = render :partial => "spree/admin/invoice/totals_receipt"
+      .footer
+        = render :partial => "spree/admin/invoice/receipt_footer"

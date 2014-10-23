@@ -1,0 +1,23 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = stylesheet_link_tag "print-invoice.css" , :media => "all"
+    %title= t("#{params[:template]}.header")
+  %body
+    .a4
+      #header
+        = render :partial => "header"
+      .address
+        = render :partial => "address"
+      .wrapper
+        .line_items
+          = render :partial => "line_items_#{params[:template]}"
+        .thanks
+          = render :partial => "thanks"
+        .spacer
+          \&nbsp;
+        .totals
+          = render :partial => "totals_#{params[:template]}"
+      .footer
+        = render :partial => "footer"

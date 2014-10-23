@@ -1,0 +1,25 @@
+- bill_address = @order.bill_address
+- ship_address = @order.ship_address
+- anonymous = @order.email =~ /@example.net$/
+- if (anonymous and Spree::HtmlInvoice::Config[:suppress_anonymous_address]) or !bill_address
+- addresses = [[" "," "]] * 5
+- else
+- addresses = [[  "#{bill_address.firstname} #{bill_address.lastname}",  "#{ship_address.firstname} #{ship_address.lastname}"]]
+- addresses << [  bill_address.address1 , ship_address.address1 ]
+- addresses << [  bill_address.address2 ,  ship_address.address2  ]  unless bill_address.address2.blank? or ship_address.address2.blank? or (bill_address.address2 =~ /\d{3,6}-\d/) or  (ship_address.address2 =~ /\d{3,6}-\d/)
+- addresses << [  "#{bill_address.zipcode} #{bill_address.city}", "#{ship_address.zipcode} #{ship_address.city}" ]
+- addresses << [ "#{(bill_address.state.name rescue bill_address.state_name)} #{bill_address.country.name}", "#{(ship_address.state.name rescue ship_address.state_name)} #{ship_address.country.name}" ]
+- addresses << [ bill_address.phone , ship_address.phone ]
+- end
+%table.address
+  %tr
+    %td.billing_header.bold{:width => "45%"}= I18n.t(:billing_address)
+    %td{:width => "17%"}
+    %td.shiping_header.bold{:width => "45%"}= I18n.t(:shipping_address)
+  - addresses.each do |row|
+    %tr
+      %td.cell{:height => "15px", :width => "45%"}
+        = row[0]
+      %td{:width => "17%"}
+      %td.cell{:height => "15px", :width => "45%"}
+        = row[1]

@@ -1,0 +1,16 @@
+%table.line_items
+  %colgroup
+    %col/
+    %col/
+  %tr
+    %td.sku.bold= I18n.t(:sku) unless @receipt
+    %td.desc.bold= I18n.t(:item_description)
+    %td.qty.bold
+      = t(:qty)
+  - @order.line_items.each do |item|
+    %tr
+      %td.cell= item.variant.sku unless @receipt
+      %td.cell
+        = item.variant.product.fullname rescue item.variant.product.name
+        = " #{item.variant.options_text}"
+      %td.cell.qty= item.quantity

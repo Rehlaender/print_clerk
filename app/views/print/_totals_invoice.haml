@@ -1,0 +1,33 @@
+%table.totals
+  %tr
+    %td.cel1.bold
+      = t(:item_total)
+      \:
+    %td.cel2.bold.cell{:align => "right"}= number_to_currency @order.item_total
+  - @order.adjustments.eligible.each do |adjustment|
+    - next if (adjustment.originator_type == 'Spree::TaxRate') and (adjustment.amount == 0)
+    - next if  (adjustment.amount == 0)
+    %tr
+      %td.cel1.bold
+        = adjustment.label
+        \:
+      %td.cel2.cell{:align => "right"}= number_to_currency adjustment.amount
+  %tr
+    %td.cel1.bold
+      %strong
+        = t(:order_total)
+        \:
+    %td.cel2.cell{:align => "right"}
+      %strong
+        %span#summary-order-total= number_to_currency @order.total
+  - if @order.price_adjustment_totals.present?
+    %tr
+      %td.cel1
+      %td.cel2
+    - @order.price_adjustment_totals.keys.each do |key|
+      - next unless @order.price_adjustment_totals[key]
+      %tr.total
+        %td.cel1.bold
+          = key
+          \:
+        %td.cel2.cell{:align => "right"}= number_to_currency @order.price_adjustment_totals[key]
