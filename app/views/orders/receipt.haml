@@ -3,8 +3,7 @@
   %head
     %meta{:charset => "utf-8"}
     %title= t(:receipt)
-    = stylesheet_link_tag "html-receipt"
-    = stylesheet_link_tag "html-receipt" , :media => "print"
+    = stylesheet_link_tag "print-receipt", :media => "all"
   %body{onload: "self.print()"}
     .receipt
       #header
