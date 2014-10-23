@@ -7,17 +7,17 @@
   %body
     .a4
       #header
-        = render :partial => "header"
+        = render :partial => "orders/header"
       .address
-        = render :partial => "address"
+        = render :partial => "orders/address"
       .wrapper
         .items
-          = render :partial => "items_#{@template}"
+          = render :partial => "orders/items_#{@template}"
         .thanks
-          = render :partial => "thanks"
+          = render :partial => "orders/thanks"
         .spacer
           \&nbsp;
         .totals
-          = render :partial => "totals_#{@template}"
+          = render :partial => "orders/totals_#{@template}"
       .footer
-        = render :partial => "footer"
+        = render :partial => "orders/footer"
