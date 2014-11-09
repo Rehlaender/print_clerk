@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:charset => "utf-8"}
-    %title= t(:receipt)
+    %title= t("receipt.header")
     = stylesheet_link_tag "print-receipt", :media => "all"
   %body{onload: "self.print()"}
     .receipt
@@ -18,10 +18,15 @@
       .wrapper
         .line_items
           %table.line_items
+            %thead
+              %tr
+                %th Tuote
+                %th Määrä
+                %th Loppusumma
             %tbody
               - @order.basket.items.each do |i|
                 %tr
-                  %td.cell= i.product.name
+                  %td.cell= i.product.full_name
                   %td.cell.qty= i.quantity
                   %td.cell.total= euros i.total
         .spacer
