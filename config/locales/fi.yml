@@ -16,12 +16,12 @@ fi:
     header: Kuormakirja
     print: Kuormakirja
     thanks: Tarkistathan tilauksen välittömästi. Kiitos tilauksestasi!
+  receipt:
+    header: Kuitti
+    print: Kuitti
   reminder:
     header: Maksumuistutus
     print: Maksumuistutus
     thanks: "Kirjanpitomme mukaan emme ole saaneet suoritustanne tästä
             laskusta.<br/> <br/>Pyydämme maksamaan laskun heti. <br/><br/>
             Mikäli lasku on jo maksettu, tämä maksuhuomautus on aiheeton."
-  receipt:
-    header: Kuitti
-    print: Kuitti
