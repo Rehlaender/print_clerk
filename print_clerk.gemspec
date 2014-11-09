@@ -14,6 +14,6 @@ Gem::Specification.new do |s|
 
   s.has_rdoc = true
 
-  s.add_runtime_dependency 'office_clerk', '~> 0.0.1'
+  s.add_runtime_dependency 'office_clerk', '~> 0.1'
 
 end
