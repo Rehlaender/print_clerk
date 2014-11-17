@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'print_clerk'
-  s.version     = '0.2'
+  s.version     = '0.3'
   s.summary     = 'Print invoices from an order'
   s.required_ruby_version = '>= 1.9.3'
   s.authors = ["Torsten Ruger"]
