@@ -1,4 +1,4 @@
-OfficeClerk::Application.routes.append do
+OfficeClerk::Engine.routes.append do
   resources :orders do
     member do
       get :invoice
