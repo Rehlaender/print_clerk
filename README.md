@@ -1,7 +1,7 @@
 SUMMARY
 =======
 
-This extension provides a "Print Invoice" button on the Orders view screen which opens a printable html page with the order details.
+This extension provides a "Print Invoice" button on the Orders view screen which opens a printable html page with the order details. Actually sevaral stypes are supported and it is easy to add more or edit existing.
 
 You have to set up your computer for printing, or PDF generation. Off course, if you cave a mac that is as easy as pressing the print + save as pdf buttons.
  
@@ -10,8 +10,8 @@ INSTALLATION
 
 1. To install you need to add the following lines to your Gemfile (no external dependencies)
 
-    gem 'print_clerk' , :git => 'https://github.com/rubyclerks/print_clerk.git'
-
+    gem 'print_clerk'
+    
 2. run bundler
 
     bundle
@@ -26,9 +26,9 @@ Configuration
 
 The templates are split into quite small chunks that you can just replace with your own.
 
-Some texts are stored in locale files say print.yml
+Texts are stored in locale files
 
-1. Set the logo path preference to include your store / company logo.
+1. Set the logo path preference to include your store / company logo in locales/config.yml
 
     invoice_logo_path: "company-logo.png"
     
@@ -36,12 +36,13 @@ Some texts are stored in locale files say print.yml
 
 2. Override any of the partial templates. they are address, footer, totals, header, thanks , and the items. The whole tanks is wrapped in a thanks hook, so replace or add at will.
 
-4. Enable packaging slips, by setting 
+4. Disable any styles by changing the config.yml to suit 
 
-  print_buttons: "invoice,slip"
+  print_styles: "receipt slip invoice reminder"
 
-  Use above feature for your own template if you want. For each button_name, define a subsection with header,   print, and thanks, in your locale.
+  For each style there will be a button on the order/show page
 
+5. Go through the templates and see what you need to change.
 
 Extra
 =====
