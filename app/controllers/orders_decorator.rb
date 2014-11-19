@@ -1,6 +1,11 @@
 # encoding : utf-8
 OrdersController.class_eval do
   
+  def button_list
+    load_order
+    render :layout => false
+  end
+
   def invoice
     load_order
     @invoice = true

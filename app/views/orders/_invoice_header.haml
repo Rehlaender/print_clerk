@@ -1,6 +1,6 @@
 %table
   %tr
-    %td{:width => "345"}= image_tag t(:invoice_logo_path) ,  :id => "logo"
+    %td{:width => "345"}= image_tag OfficeClerk.config(:invoice_logo_path) ,  :id => "logo"
     %td{:width => "345"}
       %div{:align => "right"}
         %p.title= I18n.t("#{@template}.header")
