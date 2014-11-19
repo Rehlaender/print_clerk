@@ -1,0 +1,3 @@
+config:
+  print_styles: "receipt slip invoice reminder"
+  invoice_logo_path: "invoice_logo.jpg"
