@@ -7,6 +7,7 @@ fi:
 
   footer_right: "Sähköposti<br/>Puhelin<br/>Nettikauppa <br/>Y-Tunnus"
   footer_right2: " info@auringostaitaan.fi<br/>09- 621 7001<br/>www.auringostaitaan.fi<br/>2380478-1"
+  barcode: Viivakoodi
   invoice:
     header: Lasku
     thanks: Kiitos tilauksestasi!

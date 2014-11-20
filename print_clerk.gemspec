@@ -17,4 +17,9 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'office_clerk', '~> 0.4'
 
+  s.add_runtime_dependency "barby"
+  s.add_runtime_dependency "chunky_png"
+  s.add_runtime_dependency "prawn"
+
+
 end
