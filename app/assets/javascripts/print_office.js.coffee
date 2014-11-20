@@ -1,4 +1,4 @@
- if gon.order_id
+if gon.order_id
   jQuery.ajax(url: "/orders/" + gon.order_id + "/button_list.html").done (html) ->
     $(".order_show_back").append html
 
