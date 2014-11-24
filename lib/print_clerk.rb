@@ -5,7 +5,7 @@ module PrintClerk
     config.autoload_paths += %W(#{config.root}/lib)
 
     initializer "print_invoice.assets.precompile", :after => "clerk.assets.precompile" do |app|
-      app.config.assets.precompile += [ "print-invoice.css", "print-receipt.css" ]
+      app.config.assets.precompile += [ "print-invoice.css", "print-receipt.css" , "print_office.js" , "print_office.css"]
     end
 
     def self.activate
