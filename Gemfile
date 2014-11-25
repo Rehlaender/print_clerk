@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem "office_clerk" , :github => "rubyclerks/office_clerk"
+gem "print_clerk" , :path => "../"
 
 gem 'sqlite3'
 

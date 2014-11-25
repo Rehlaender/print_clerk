@@ -27,6 +27,6 @@ feature "new product" do
   end
   it "renders product barcode" do
     product = create :product
-#    visit_path barcode_product_path(product) 
+    visit_path barcode_product_path(product) 
   end
 end
