@@ -1,3 +1,4 @@
+# coding: UTF-8
 require 'barby'
 require 'prawn'
 require 'prawn/measurement_extensions'
