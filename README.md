@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/rubyclerks/print_clerk.svg?branch=master)](https://travis-ci.org/rubyclerks/print_clerk)
+[![Gem Version](https://badge.fury.io/rb/print_clerk.svg)](http://badge.fury.io/rb/print_clerk)
+[![Code Climate](https://codeclimate.com/github/rubyclerks/print_clerk/badges/gpa.svg)](https://codeclimate.com/github/rubyclerks/print_clerk)
+[![Test Coverage](https://codeclimate.com/github/rubyclerks/print_clerk/badges/coverage.svg)](https://codeclimate.com/github/rubyclerks/print_clerk)
+
 SUMMARY
 =======
 
