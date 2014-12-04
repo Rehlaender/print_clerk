@@ -8,6 +8,11 @@ OfficeClerk::Engine.routes.append do
       get :reminder
     end
   end
+  resources :baskets do
+    member do
+      get :button_list
+    end
+  end
   resources :products do
     member do
       get :barcode  #print the barcode and price on a 50x25 mm area

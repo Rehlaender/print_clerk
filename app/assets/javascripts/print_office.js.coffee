@@ -5,3 +5,7 @@ if gon.order_id
 if gon.product_id
   jQuery.ajax(url: "/products/" + gon.product_id + "/barcode_button.html").done (html) ->
     $(".product_show_row_end").append html
+
+if gon.basket_id
+  jQuery.ajax(url: "/baskets/" + gon.basket_id + "/button_list.html").done (html) ->
+    $(".basket_show_end").append html
