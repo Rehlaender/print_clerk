@@ -2,6 +2,12 @@ module PrintClerk
   class Engine < Rails::Engine
     engine_name 'print_clerk'
 
+    # indicate that we have stylesheet/js stuff to be added to office, with the given name
+    # files (css + js) must exist in asset path
+    def office_assets
+      "print_office"
+    end
+
     config.autoload_paths += %W(#{config.root}/lib)
 
     initializer "print_invoice.assets.precompile", :after => "clerk.assets.precompile" do |app|
