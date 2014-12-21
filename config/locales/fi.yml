@@ -11,14 +11,11 @@ fi:
   invoice:
     header: Lasku
     thanks: Kiitos tilauksestasi!
-    print: Lasku
   slip:
     header: Kuormakirja
-    print: Kuormakirja
     thanks: Tarkistathan tilauksen välittömästi. Kiitos tilauksestasi!
   receipt:
     header: Kuitti
-    print: Kuitti
   reminder:
     header: Maksumuistutus
     print: Maksumuistutus

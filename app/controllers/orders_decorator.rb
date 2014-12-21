@@ -6,26 +6,30 @@ OrdersController.class_eval do
     render :layout => false
   end
 
+  def receipt
+    load_order
+  end
+  
   def invoice
     load_order
     @invoice = true
     @template = "invoice"
   end
-
-  def receipt
-    load_order
-  end
-
+  
+  # slip is an invoice without prices
   def slip
     load_order
     @slip = true
-    @template = "slip"
+    @template = "invoice"
+    render @template
   end
 
+  # reminder is an invoice with an extra text to kindly pay up
   def reminder
     load_order
     @reminder = true
-    @template = "reminder"
+    @template = "invoice"
+    render @template
   end
 
 end

@@ -1,7 +1,12 @@
-%table.footer
-  %tr
-    %td.cel1.bold{:valign => "top"}= raw I18n.t(:footer_left)
-    %td.cel2.cell{:valign => "top"}= raw I18n.t(:footer_left2)
-    %td.cel3.bold{:valign => "top"}
-      = raw I18n.t(:footer_right)
-    %td.cel4.cell{:valign => "top"}= raw I18n.t(:footer_right2)
+.row.footer
+  .col-xs-4
+    %b= raw I18n.t(:footer_left)
+    %br
+    = raw I18n.t(:footer_left2)
+
+  .col-xs-4
+    = raw I18n.t(:footer_center)
+  
+  .col-xs-4
+    = raw I18n.t(:footer_right)
+    
