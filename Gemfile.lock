@@ -25,10 +25,10 @@ PATH
   remote: ../
   specs:
     print_clerk (0.4)
-      barby
-      chunky_png
+      barby (~> 0.6)
+      chunky_png (~> 1.3)
       office_clerk (~> 0.8)
-      prawn
+      prawn (~> 1.2)
 
 GEM
   remote: https://rubygems.org/
