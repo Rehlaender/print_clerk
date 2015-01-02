@@ -5,7 +5,7 @@
   %tr
     %td.sku.bold= t(:ean) unless @receipt
     %td.desc.bold= t(:description)
-    %td.qty.bold= t(:qty)
+    %td.qty.bold= t(:quantity)
   - @order.basket.items.each do |item|
     %tr
       %td.cell= item.product.ean unless @receipt

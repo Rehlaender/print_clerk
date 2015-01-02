@@ -1,14 +1,7 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 
 en:
-  footer_left: "Return any time any reason<br/>"
-  footer_left2: " 14 days <br/> or never"
-
-  footer_right: "Company  <br/>Phone  <br/> www "
-  footer_right2: " My great company <br/>040 146 1222 <br/>  www.gohereoften.com"
-
-  size: Size
-  price: Price
+  item_total: Products
   barcode: Barcode
   invoice:
     header: Customer Invoice
@@ -23,6 +16,6 @@ en:
     print: Reminder
     thanks: Our system has not registered any payment for this Invoice. We kindly request you 
             correct this situation.
-    receipt:
-      header: Receipt
-      print: Receipt
+  receipt:
+    header: Receipt
+    print: Receipt

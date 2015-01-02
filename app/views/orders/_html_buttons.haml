@@ -1,4 +1,0 @@
-- buttons = t(:print_buttons) || "invoice"
-- buttons = buttons.split(",").collect{|b| b.strip }
-- buttons.each do |button|
-  = button_link_to(t(button.to_s+".print"), "/print/#{@order.number}/#{button}" , :target => "_blank")
