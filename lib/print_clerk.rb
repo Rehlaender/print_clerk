@@ -1,5 +1,3 @@
-require "reference_number"
-
 module PrintClerk
   class Engine < Rails::Engine
     engine_name 'print_clerk'

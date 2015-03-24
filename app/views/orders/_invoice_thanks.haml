@@ -1,7 +1,5 @@
 - unless @slip
-  - base = @order.number[1 .. -1]
-  - viite = ReferenceNumber.new(base).to_s
-  Maksaessasi käytä viitenumeroa: #{viite}
+  Maksaessasi käytä viitenumeroa: #{@order.viite}
 %br
 %b
   = raw t("#{@template}.thanks" )
