@@ -39,13 +39,13 @@ Texts are stored in locale files
     
     Somewhere in your asset path
 
-2. Override any of the partial templates. they are address, footer, totals, header, thanks , and the items. The whole tanks is wrapped in a thanks hook, so replace or add at will.
+2. Override any of the partial templates. they are address, footer, totals, header, thanks , and the items. Especially the thanks and footer templates are ones you will probably want to replace.
 
 4. Disable any styles by changing the config.yml to suit 
 
   print_styles: "receipt slip invoice reminder"
 
-  For each style there will be a button on the order/show page
+  For each style there will be a button on the order/show page ( you may add your own)
 
 5. Go through the templates and see what you need to change.
 
