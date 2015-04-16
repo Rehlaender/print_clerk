@@ -13,6 +13,6 @@
         = item.product.full_name rescue item.product.name
         - if item.discount > 0
           (#{-item.discount}%)
-      %td.cell.price.text-right= number_to_currency(item.price) unless @receipt
+      %td.cell.price.text-right= best_euros(item.price) unless @receipt
       %td.cell.qty.text-right= item.quantity
       %td.cell.total.text-right= number_to_currency(item.price * item.quantity)

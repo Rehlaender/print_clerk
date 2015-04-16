@@ -17,10 +17,10 @@ describe "Orders" do
       visit_path "#{order_path(order)}/invoice"
       expect(page).to have_content I18n.t(:order_total)
     end
-    it "shows product name" do
+    it "uses best_euros to render price" do
       order = create :order
+      #TODO expect(???).to receive(:best_euros)
       visit_path "#{order_path(order)}/invoice"
-      expect(page).to have_content order.basket.items.first.product.full_name
     end
   end
 end
