@@ -18,7 +18,7 @@ group :development do
   gem "i18n-tasks"
 end
 group :test do
-#  gem "poltergeist"
+  gem "poltergeist"
 #  gem "phantomjs"
   gem "codeclimate-test-reporter"
   gem 'rspec-rails'
