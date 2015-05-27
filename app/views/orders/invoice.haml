@@ -1,8 +1,10 @@
+- title(I18n.t("#{@template}.header") + " " + @order.number)
+
 .invoice
   = render :partial => "orders/invoice_header"
-  
-      
-  = render :partial => "orders/invoice_address"    
+
+
+  = render :partial => "orders/invoice_address"
 
 
   .row.wrapper
@@ -17,4 +19,3 @@
       = render :partial => "orders/invoice_thanks"
 
   = render :partial => "orders/invoice_footer"
-  

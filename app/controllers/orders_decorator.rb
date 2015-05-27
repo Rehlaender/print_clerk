@@ -1,6 +1,6 @@
 # encoding : utf-8
 OrdersController.class_eval do
-  
+
   def button_list
     load_order
     render :layout => false
@@ -9,13 +9,13 @@ OrdersController.class_eval do
   def receipt
     load_order
   end
-  
+
   def invoice
     load_order
     @invoice = true
     @template = "invoice"
   end
-  
+
   # slip is an invoice without prices
   def slip
     load_order
