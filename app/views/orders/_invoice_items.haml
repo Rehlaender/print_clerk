@@ -3,8 +3,7 @@
     %td.sku.bold= t(:ean) unless @receipt
     %td.desc.bold= t(:description)
     %td.price.bold.text-right= t(:price) unless @receipt
-    %td.qty.bold.text-right
-      = t(:quantity)
+    %td.qty.bold.text-right= t(:quantity)
     %td.total.bold.text-right= t(:total)
   - @order.basket.items.each do |item|
     %tr

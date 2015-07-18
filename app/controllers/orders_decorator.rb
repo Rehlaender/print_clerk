@@ -20,16 +20,16 @@ OrdersController.class_eval do
   def slip
     load_order
     @slip = true
-    @template = "invoice"
-    render @template
+    @template = "slip"
+    render "invoice"
   end
 
   # reminder is an invoice with an extra text to kindly pay up
   def reminder
     load_order
     @reminder = true
-    @template = "invoice"
-    render @template
+    @template = "reminder"
+    render "invoice"
   end
 
 end
