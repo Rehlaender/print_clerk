@@ -3,7 +3,12 @@ OrdersController.class_eval do
 
   def button_list
     load_order
+    puts print_styles
     render :layout => false
+  end
+
+  def print_styles
+    OfficeClerk.config(:print_styles).split
   end
 
   def receipt

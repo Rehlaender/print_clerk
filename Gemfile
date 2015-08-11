@@ -19,7 +19,7 @@ group :development do
 end
 group :test do
   gem "poltergeist"
-#  gem "phantomjs"
+  gem "phantomjs" , :require => 'phantomjs/poltergeist'
   gem "codeclimate-test-reporter"
   gem 'rspec-rails'
   gem 'capybara'
