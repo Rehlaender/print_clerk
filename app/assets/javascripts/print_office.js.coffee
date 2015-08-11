@@ -9,3 +9,8 @@ if gon.product_id
 if gon.basket_id
   jQuery.ajax(url: "/baskets/" + gon.basket_id + "/button_list.html").done (html) ->
     $(".basket_show_end").append html
+
+if gon.purchase_id
+  $(document).on "ready" , ->
+    $(".purchase_show_last").append '<a class="btn btn-primary" href="/purchases/' + gon.purchase_id + '/invoice">Print Invoice</a>'
+
