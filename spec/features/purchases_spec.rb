@@ -13,7 +13,7 @@ describe "Purchases" do
     it "shows total" do
       purchase = create :purchase
       visit_path "#{purchase_path(purchase)}/invoice"
-      expect(page).to have_content "Purchase"
+      expect(page).to have_content I18n.t(:purchase_total)
     end
   end
 end
