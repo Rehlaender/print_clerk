@@ -22,7 +22,4 @@ en:
 
   purchase invoice:
     header: Purchase Invoice
-    thanks: Thank you for your order.
-    print: Print Invoice
-
   purchase_total: Total
