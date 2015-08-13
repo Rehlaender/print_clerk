@@ -19,3 +19,7 @@ en:
   receipt:
     header: Receipt
     print: Receipt
+
+  purchase invoice:
+    header: Purchase Invoice
+  purchase_total: Total
