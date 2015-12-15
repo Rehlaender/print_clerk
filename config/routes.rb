@@ -8,6 +8,13 @@ OfficeClerk::Engine.routes.append do
       get :reminder
     end
   end
+
+  resources :purchases do
+    member do
+      get :invoice, to: 'purchase_invoices#show'
+    end
+  end
+
   resources :baskets do
     member do
       get :button_list
