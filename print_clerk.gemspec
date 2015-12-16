@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'print_clerk'
-  s.version     = '0.4'
+  s.version     = '0.5'
   s.license     = 'MIT'
   s.summary     = 'Print invoices for a rubyclerk order'
   s.description  = "Html based, ie client side, printing for orders. Different styles are invoice, packing slip and receipt (for receipt printer in shop). Easy to configure and adapt"
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.has_rdoc = true
 
-  s.add_runtime_dependency 'office_clerk', '~> 0.8'
+  s.add_runtime_dependency 'office_clerk', '~> 0.9'
 
   s.add_runtime_dependency "barby" , "~> 0.6"
   s.add_runtime_dependency "chunky_png" , "~> 1.3"
