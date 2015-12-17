@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency "barby" , "~> 0.6"
   s.add_runtime_dependency "chunky_png" , "~> 1.3"
-  s.add_runtime_dependency "prawn" , "~> 1.2"
+  s.add_runtime_dependency "prawn" ,  "~> 2.0"
   s.add_runtime_dependency "reference_number"
 
 
