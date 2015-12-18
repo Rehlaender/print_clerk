@@ -12,6 +12,7 @@ module PrintClerk
 
     initializer "print_invoice.assets.precompile", :after => "clerk.assets.precompile" do |app|
       app.config.assets.precompile += [  "print_office.js" , "print_office.css"]
+      app.config.assets.precompile += [  "invoice_logo.jpg" , "receipt-logo.gif"]
     end
 
     def self.activate
