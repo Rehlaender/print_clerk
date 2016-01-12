@@ -6,17 +6,17 @@
 SUMMARY
 =======
 
-This extension provides a "Print Invoice" button on the Orders view screen which opens a printable html page with the order details. Actually sevaral stypes are supported and it is easy to add more or edit existing.
+This extension provides a "Print Invoice" button on the Orders view screen which opens a printable html page with the order details. Actually several types are supported and it is easy to add more or edit existing.
 
 You have to set up your computer for printing, or PDF generation. Off course, if you cave a mac that is as easy as pressing the print + save as pdf buttons.
- 
+
 INSTALLATION
 ============
 
 1. To install you need to add the following lines to your Gemfile (no external dependencies)
 
     gem 'print_clerk'
-    
+
 2. run bundler
 
     bundle
@@ -36,12 +36,12 @@ Texts are stored in locale files
 1. Set the logo path preference in locales/config.yml (root key config)
 
     invoice_logo_path: "company-logo.png"
-    
+
     With the file existing in your asset path
 
 2. Override any of the partial templates. they are address, footer, totals, header, thanks , and the items. Especially the thanks and footer templates are ones you will probably want to replace.
 
-4. Disable any styles by changing the config.yml to suit 
+4. Disable any styles by changing the config.yml to suit
 
     print_styles: "receipt slip invoice reminder"
 
