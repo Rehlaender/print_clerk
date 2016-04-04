@@ -3,7 +3,7 @@
     = render :partial => "orders/receipt_header"
   .receipt-info
     - date = @order.ordered_on || @order.ordered_on
-    =l(date.to_date) 
+    =l(date.to_date)
     /
     =t(:order)
     =@order.number
@@ -13,9 +13,9 @@
       %table.receipt-line_items
         %thead
           %tr
-            %th Tuote
-            %th Määrä
-            %th Loppusumma
+            %th Producto
+            %th Cantidad
+            %th Total
         %tbody
           - @order.basket.items.each do |i|
             %tr
@@ -37,9 +37,9 @@
             %td.receipt-cel1
             %td.receipt-cel2
           -@order.taxes.each do |tax_rate , amount|
-            %tr.receipt-total
-              %td.receipt-cel1.bold
+            %tr.receipt-total.hide
+              %td.receipt-cel1.bold.hide
                 = t(:vat) + " " + tax_rate.to_s + " % "
-              %td.receipt-cel2.receipt-cell{align: "right"}= euros amount
+              %td.receipt-cel2.receipt-cell.hide{align: "right"}= euros amount
   .receipt-footer
     = render :partial => "orders/receipt_footer"
