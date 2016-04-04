@@ -2,24 +2,23 @@
 
 en:
   item_total: Products
-  barcode: Barcode
+  barcode: Codigo de barra
   invoice:
-    header: Customer Invoice
-    thanks: Thank you for your order.
-    print: Print Invoice
+    header: Factura para cliente
+    thanks: Gracias por su compra
+    print: Imprimir factura
   slip:
-    header: Packaging Slip
-    print: Print Slip
-    thanks: Please check the contents immediately.
+    header: Hoja de embalaje
+    print: Imprimir hoja
+    thanks: Por favor cheque el contenido inmediatamente
   reminder:
-    header: Payment Reminder
-    print: Reminder
-    thanks: Our system has not registered any payment for this Invoice. We kindly request you 
-            correct this situation.
+    header: Recordatorio de pago
+    print: Recordatorio
+    thanks: Nuestro sistema no a registrado un paag para esta factura, por favor corriga la situacion
   receipt:
-    header: Receipt
-    print: Receipt
+    header: Recibo
+    print: Recibo
 
   purchase invoice:
-    header: Purchase Invoice
+    header: Factura de compra
   purchase_total: Total
