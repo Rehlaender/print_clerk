@@ -7,7 +7,7 @@
   %tr
     %td
       &nbsp;
-    %tr
-      %td.cel1
+    %tr.hide
+      %td.cel1.hide
         = "#{t(:vat)}:"
-      %td.cel2{:align => "right"}= euros(@purchase.basket.total_tax)
+      %td.cel2.hide{:align => "right"}= euros(@purchase.basket.total_tax)
