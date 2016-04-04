@@ -4,11 +4,11 @@
       = t(:item_total)
       \:
     %td.cel2.bold{:align => "right"}= euros(@order.basket.total_price)
-  %tr
-    %td.cel1.bold
+  %tr.hide
+    %td.cel1.bold.hide
       %strong
         = "#{t(:shipment_price)}:"
-    %td.cel2.cell{:align => "right"}
+    %td.cel2.cell.hide{:align => "right"}
       %strong
         %span#summary-order-total= euros @order.shipment_price
   %tr
@@ -23,7 +23,7 @@
     %td
       &nbsp;
   - @order.taxes.each do |tax , value|
-    %tr
-      %td.cel1
+    %tr.hide
+      %td.cel1.hide
         = "#{t(:vat)} #{tax}:"
-      %td.cel2.cell{:align => "right"}= euros value
+      %td.cel2.cell.hide{:align => "right"}= euros value
